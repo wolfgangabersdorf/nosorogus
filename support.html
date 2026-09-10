@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Support & Contact — Nosorogus Android Studio</title>
+  
+  <meta name="description" content="Official Developer Support, inquiries, and troubleshooting for Nosorogus Android games and apps on Google Play.">
+  <meta name="keywords" content="Nosorogus Support, Android Developer Contact, Google Play, Chef's Challenge help, Solar System help">
+  <meta name="author" content="Nosorogus">
+  <meta name="robots" content="index, follow">
+
+  <!-- Immediate Browser Language Detection (Default EN, RU if browser language is ru) -->
+  <script>
+    (function() {
+      try {
+        var userLang = localStorage.getItem("nosorogus_user_lang");
+        var chosen = "en";
+        if (userLang === "ru" || userLang === "en") {
+          chosen = userLang;
+        } else {
+          var browserLangs = navigator.languages || (navigator.language ? [navigator.language] : []);
+          var primary = browserLangs.length > 0 ? (browserLangs[0] || "").toLowerCase() : "";
+          if (primary.indexOf("ru") === 0) {
+            chosen = "ru";
+          }
+        }
+        document.documentElement.lang = chosen;
+        window.__initialLang = chosen;
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wolfgangabersdorf.github.io/nosorogus/support.html">
+  <meta property="og:title" content="Developer Support & Contact — Nosorogus">
+  <meta property="og:description" content="Official Developer Support and contact for Nosorogus Android apps and games.">
+  <meta property="og:image" content="https://play-lh.googleusercontent.com/-l5jb1qYa9L5R-wte5-qO3NkgxeoNcTKwvvzeikJghMP3q7ywrLA0n2DogERaCaWCA2mi20N1dUxJBRksZwwEw=w1200">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://wolfgangabersdorf.github.io/nosorogus/support.html">
+  <meta property="twitter:title" content="Developer Support — Nosorogus">
+  <meta property="twitter:description" content="Official Developer Support and contact for Nosorogus Android apps and games.">
+  <meta property="twitter:image" content="https://play-lh.googleusercontent.com/-l5jb1qYa9L5R-wte5-qO3NkgxeoNcTKwvvzeikJghMP3q7ywrLA0n2DogERaCaWCA2mi20N1dUxJBRksZwwEw=w1200">
+
+  <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="logo-area" id="brandLogo">
+        <div class="logo-mark">N</div>
+        <span data-i18n="brand_name">Nosorogus</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="index.html#catalog" class="nav-link" data-i18n="nav_apps">Apps & Games</a></li>
+          <li><a href="support.html" class="nav-link active" data-i18n="nav_support">Support</a></li>
+          <li><a href="privacy.html" class="nav-link" data-i18n="nav_privacy">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button type="button" class="lang-btn" data-lang="ru" id="langRuBtn">RU</button>
+          <button type="button" class="lang-btn active" data-lang="en" id="langEnBtn">EN</button>
+        </div>
+
+        <a href="https://play.google.com/store/apps/developer?id=Nosorogus" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-primary" 
+           id="headerGooglePlayBtn"
+           data-i18n="btn_playstore">
+          Google Play
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="doc-page">
+    <div class="doc-container">
+      
+      <!-- Breadcrumbs -->
+      <nav class="doc-breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html" data-i18n="crumb_home">Home</a>
+        <span>/</span>
+        <span data-i18n="crumb_support">Developer Support</span>
+      </nav>
+
+      <!-- Hero Header -->
+      <header class="doc-hero">
+        <div class="doc-badge-row">
+          <span class="hero-badge">
+            <span class="badge-dot"></span>
+            <span data-i18n="support_badge">Direct Studio Assistance</span>
+          </span>
+        </div>
+        <h1 class="doc-title" data-i18n="support_title">Developer Support & Contact</h1>
+        <p class="doc-lead" data-i18n="support_lead">
+          Have questions regarding our gameplay mechanics, need assistance with your device, or want to suggest an improvement? We are here to help you get the most out of our releases.
+        </p>
+        <div class="doc-meta-info">
+          <span><strong>Studio:</strong> Nosorogus</span>
+          <span><strong>Platform:</strong> Google Play Android</span>
+          <span><strong>Response Time:</strong> 24–48 Hours</span>
+        </div>
+      </header>
+
+      <!-- Contact Channels Cards -->
+      <div class="contact-cards-grid">
+        <div class="contact-card">
+          <span class="contact-card-label" data-i18n="contact_card1_label">Support Inquiry</span>
+          <span class="contact-card-value">
+            <a href="mailto:wolfgangabersdorf@gmail.com" style="color: var(--accent-brand);">wolfgangabersdorf@gmail.com</a>
+          </span>
+          <span class="contact-card-sub" data-i18n="contact_card1_sub">Direct developer mailbox for bugs, questions, and ideas</span>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-card-label" data-i18n="contact_card2_label">Official Store</span>
+          <span class="contact-card-value">
+            <a href="https://play.google.com/store/apps/developer?id=Nosorogus" target="_blank" rel="noopener noreferrer" style="color: var(--accent-brand);">Google Play Profile &rarr;</a>
+          </span>
+          <span class="contact-card-sub" data-i18n="contact_card2_sub">Check store updates, release notes, and ratings</span>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-card-label" data-i18n="contact_card3_label">Coverage</span>
+          <span class="contact-card-value" style="color: var(--text-primary);" data-i18n="contact_card3_val">Global Support</span>
+          <span class="contact-card-sub" data-i18n="contact_card3_sub">Bilingual support in English and Russian</span>
+        </div>
+      </div>
+
+      <!-- Support Content Card -->
+      <div class="doc-content-card">
+        
+        <!-- App Assistance Section -->
+        <section class="doc-section">
+          <h2 class="doc-section-title">
+            <span class="doc-section-num">1</span>
+            <span data-i18n="supp_sec1_title">App Assistance & Quick Help</span>
+          </h2>
+          <p data-i18n="supp_sec1_p1">
+            Find answers to commonly asked questions about our titles:
+          </p>
+
+          <div class="faq-grid">
+            <div class="faq-card">
+              <h3 class="faq-question" data-i18n="faq1_q">Chef's Challenge: How does gesture cooking work?</h3>
+              <p class="faq-answer" data-i18n="faq1_a">
+                Chef's Challenge uses tactile gesture swipes. Rapid short swipes on the cutting board slice ingredients, circular motions stir pots, and taps adjust flame burner levels. Ensure your screen is clean and multi-touch gestures aren't blocked by third-party navigation overlays.
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <h3 class="faq-question" data-i18n="faq2_q">How is my game progress saved?</h3>
+              <p class="faq-answer" data-i18n="faq2_a">
+                Your kitchen progression, unlocked stoves, cookware upgrades, and high scores are saved locally in internal Android storage automatically after each prep shift or stage completion.
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <h3 class="faq-question" data-i18n="faq3_q">Our Solar System: What sources are used for planetary data?</h3>
+              <p class="faq-answer" data-i18n="faq3_a">
+                All celestial data — including planetary diameters, orbital periods, semi-major axes, atmospheric compositions, and moon counts — are curated from verified astronomical repositories and space agency reference catalogs (NASA / JPL planetary factsheets).
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <h3 class="faq-question" data-i18n="faq4_q">Do your apps support tablets, foldables, and offline play?</h3>
+              <p class="faq-answer" data-i18n="faq4_a">
+                Yes! Both Chef's Challenge and Our Solar System are optimized to adapt smoothly to tablet aspect ratios and foldable displays, and both function completely offline without requiring an active internet connection.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bug Report Guidelines -->
+        <section class="doc-section">
+          <h2 class="doc-section-title">
+            <span class="doc-section-num">2</span>
+            <span data-i18n="supp_sec2_title">How to Report a Bug or Issue</span>
+          </h2>
+          <p data-i18n="supp_sec2_p1">
+            If you encounter an unexpected crash, visual glitch, or performance stutter, sending us a brief report helps us release an update swiftly:
+          </p>
+          <ul class="doc-list">
+            <li class="doc-list-item" data-i18n="supp_step_1"><strong>App Name & Version:</strong> State which app and the installed version (visible in Google Play or Android App Info).</li>
+            <li class="doc-list-item" data-i18n="supp_step_2"><strong>Device Model & OS:</strong> E.g., Samsung Galaxy S23, Google Pixel 8, or Xiaomi Pad running Android 13/14.</li>
+            <li class="doc-list-item" data-i18n="supp_step_3"><strong>Steps to Reproduce:</strong> What actions were taken right before the issue occurred (e.g., "during rush hour wave 4", "when tapping Neptune comparison view").</li>
+            <li class="doc-list-item" data-i18n="supp_step_4"><strong>Screenshots or Screen Recording (Optional):</strong> If visual, attaching a quick screenshot helps diagnose issues immediately.</li>
+          </ul>
+        </section>
+
+        <!-- Community & Feedback -->
+        <section class="doc-section">
+          <h2 class="doc-section-title">
+            <span class="doc-section-num">3</span>
+            <span data-i18n="supp_sec3_title">Feature Requests & Suggestions</span>
+          </h2>
+          <p data-i18n="supp_sec3_p1">
+            We love hearing from passionate cooks and space enthusiasts! Whether you want new recipes, custom kitchen stations, deeper planetary atmosphere layers, or new astronomical objects, send your ideas to our mailbox.
+          </p>
+          <div class="doc-callout">
+            <p data-i18n="supp_sec3_callout">
+              We review every piece of feedback and prioritize upcoming features and balance tweaks based on player suggestions.
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-area">
+            <div class="logo-mark">N</div>
+            <span>Nosorogus</span>
+          </div>
+          <p data-i18n="footer_desc">
+            Indie game and app development studio built for the Android ecosystem.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 data-i18n="footer_nav_title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="index.html#catalog" data-i18n="nav_apps">Apps & Games</a></li>
+            <li><a href="support.html" data-i18n="nav_support">Support</a></li>
+            <li><a href="https://play.google.com/store/apps/developer?id=Nosorogus" target="_blank" rel="noopener noreferrer">Google Play Developer Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 data-i18n="footer_legal_title">Legal & Inquiries</h4>
+          <ul class="footer-links-list">
+            <li><a href="support.html" data-i18n="footer_contact">Developer Support</a></li>
+            <li><a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Nosorogus. <span data-i18n="footer_rights">All rights reserved.</span></div>
+        <div>Designed for Android & Google Play</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/policy-i18n.js"></script>
+</body>
+</html>

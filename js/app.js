@@ -85,13 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
       footer_top: "В начало",
       meta_desc: "Официальная страница разработчика Android приложений и мобильных игр Nosorogus на Google Play. Интерактивные кулинарные битвы и познавательные путеводители.",
       
+      nav_home: "Главная",
+      nav_support: "Поддержка",
+      nav_privacy: "Конфиденциальность",
+
       // Footer
       footer_desc: "Независимая студия разработки приложений и мобильных игр для экосистемы Android.",
       footer_nav_title: "Навигация",
       footer_legal_title: "Политика и контакты",
       footer_contact: "Поддержка разработчика",
       footer_privacy: "Политика конфиденциальности",
-      footer_terms: "Условия использования",
       footer_rights: "Все права защищены."
     },
     en: {
@@ -173,13 +176,16 @@ document.addEventListener("DOMContentLoaded", () => {
       footer_top: "Back to top",
       meta_desc: "Official Google Play developer page for Nosorogus Android apps and mobile games. Interactive culinary battles and educational astronomy guides.",
 
+      nav_home: "Home",
+      nav_support: "Support",
+      nav_privacy: "Privacy Policy",
+
       // Footer
       footer_desc: "Indie game and app development studio built for the Android ecosystem.",
       footer_nav_title: "Navigation",
       footer_legal_title: "Legal & Inquiries",
-      footer_contact: "Developer Contact",
+      footer_contact: "Developer Support",
       footer_privacy: "Privacy Policy",
-      footer_terms: "Terms of Service",
       footer_rights: "All rights reserved."
     }
   };
@@ -362,9 +368,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function closeAllModals() {
-    videoModal.classList.remove("active");
-    videoIframe.src = "";
-    lightboxModal.classList.remove("active");
+    if (videoModal) videoModal.classList.remove("active");
+    if (videoIframe) videoIframe.src = "";
+    if (lightboxModal) lightboxModal.classList.remove("active");
     document.body.style.overflow = "";
   }
 
@@ -372,7 +378,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", closeAllModals);
   });
 
-  [videoModal, lightboxModal].forEach(modal => {
+  [videoModal, lightboxModal].filter(Boolean).forEach(modal => {
     modal.addEventListener("click", (e) => {
       if (e.target === modal) {
         closeAllModals();
@@ -383,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeAllModals();
-    } else if (lightboxModal.classList.contains("active")) {
+    } else if (lightboxModal && lightboxModal.classList.contains("active")) {
       if (e.key === "ArrowLeft") {
         navigateLightbox(-1);
       } else if (e.key === "ArrowRight") {
@@ -394,6 +400,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Lightbox Functionality
   function openLightbox(galleryKey, index = 0) {
+    if (!lightboxModal || !lightboxImg) return;
     activeGallery = galleries[galleryKey] || [];
     if (!activeGallery.length) return;
     currentGalleryIndex = index;
@@ -403,6 +410,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateLightbox() {
+    if (!lightboxImg || !lightboxCaption) return;
     const item = activeGallery[currentGalleryIndex];
     if (!item) return;
     lightboxImg.src = item.src;
@@ -411,8 +419,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ? `${item.caption} (${currentGalleryIndex + 1}/${activeGallery.length})`
       : item.caption;
 
-    lightboxPrev.style.display = hasMultiple ? "flex" : "none";
-    lightboxNext.style.display = hasMultiple ? "flex" : "none";
+    if (lightboxPrev) lightboxPrev.style.display = hasMultiple ? "flex" : "none";
+    if (lightboxNext) lightboxNext.style.display = hasMultiple ? "flex" : "none";
   }
 
   function navigateLightbox(direction) {
@@ -421,8 +429,8 @@ document.addEventListener("DOMContentLoaded", () => {
     updateLightbox();
   }
 
-  lightboxPrev.addEventListener("click", () => navigateLightbox(-1));
-  lightboxNext.addEventListener("click", () => navigateLightbox(1));
+  if (lightboxPrev) lightboxPrev.addEventListener("click", () => navigateLightbox(-1));
+  if (lightboxNext) lightboxNext.addEventListener("click", () => navigateLightbox(1));
 
   // Thumbnail buttons click triggers
   document.querySelectorAll("[data-gallery]").forEach(btn => {

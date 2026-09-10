@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Nosorogus Android Apps & Games</title>
+  
+  <meta name="description" content="Privacy Policy for Android applications and mobile games published by Nosorogus on Google Play, including Chef's Challenge and Our Solar System.">
+  <meta name="keywords" content="Nosorogus, Privacy Policy, Android Developer, Google Play, Chef's Challenge, Our Solar System">
+  <meta name="author" content="Nosorogus">
+  <meta name="robots" content="index, follow">
+
+  <!-- Immediate Browser Language Detection (Default EN, RU if browser language is ru) -->
+  <script>
+    (function() {
+      try {
+        var userLang = localStorage.getItem("nosorogus_user_lang");
+        var chosen = "en";
+        if (userLang === "ru" || userLang === "en") {
+          chosen = userLang;
+        } else {
+          var browserLangs = navigator.languages || (navigator.language ? [navigator.language] : []);
+          var primary = browserLangs.length > 0 ? (browserLangs[0] || "").toLowerCase() : "";
+          if (primary.indexOf("ru") === 0) {
+            chosen = "ru";
+          }
+        }
+        document.documentElement.lang = chosen;
+        window.__initialLang = chosen;
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wolfgangabersdorf.github.io/nosorogus/privacy/">
+  <meta property="og:title" content="Privacy Policy — Nosorogus Android Apps & Games">
+  <meta property="og:description" content="Privacy Policy for Android applications and games developed by Nosorogus.">
+  <meta property="og:image" content="https://play-lh.googleusercontent.com/-l5jb1qYa9L5R-wte5-qO3NkgxeoNcTKwvvzeikJghMP3q7ywrLA0n2DogERaCaWCA2mi20N1dUxJBRksZwwEw=w1200">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://wolfgangabersdorf.github.io/nosorogus/privacy/">
+  <meta property="twitter:title" content="Privacy Policy — Nosorogus">
+  <meta property="twitter:description" content="Privacy Policy for Android applications and games developed by Nosorogus.">
+  <meta property="twitter:image" content="https://play-lh.googleusercontent.com/-l5jb1qYa9L5R-wte5-qO3NkgxeoNcTKwvvzeikJghMP3q7ywrLA0n2DogERaCaWCA2mi20N1dUxJBRksZwwEw=w1200">
+
+  <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="../" class="logo-area" id="brandLogo">
+        <div class="logo-mark">N</div>
+        <span data-i18n="brand_name">Nosorogus</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="../" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="../#catalog" class="nav-link" data-i18n="nav_apps">Apps & Games</a></li>
+          <li><a href="../support/" class="nav-link" data-i18n="nav_support">Support</a></li>
+          <li><a href="./" class="nav-link active" data-i18n="nav_privacy">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button type="button" class="lang-btn" data-lang="ru" id="langRuBtn">RU</button>
+          <button type="button" class="lang-btn active" data-lang="en" id="langEnBtn">EN</button>
+        </div>
+
+        <a href="https://play.google.com/store/apps/developer?id=Nosorogus" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-primary" 
+           id="headerGooglePlayBtn"
+           data-i18n="btn_playstore">
+          Google Play
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="doc-page">
+    <div class="doc-container">
+      
+      <!-- Breadcrumbs -->
+      <nav class="doc-breadcrumbs" aria-label="Breadcrumbs">
+        <a href="../" data-i18n="crumb_home">Home</a>
+        <span>/</span>
+        <span data-i18n="crumb_privacy">Privacy Policy</span>
+      </nav>
+
+      <!-- Hero Header -->
+      <header class="doc-hero">
+        <div class="doc-badge-row">
+          <span class="hero-badge">
+            <span class="badge-dot"></span>
+            <span data-i18n="privacy_badge">Official Developer Policy</span>
+          </span>
+        </div>
+        <h1 class="doc-title" data-i18n="privacy_title">Privacy Policy</h1>
+        <p class="doc-lead" data-i18n="privacy_lead">
+          This Privacy Policy describes our practices regarding the collection, use, and disclosure of information when you use mobile games and applications published by Nosorogus on Google Play.
+        </p>
+        <div class="doc-meta-info">
+          <span><strong>Published by:</strong> Nosorogus Studio</span>
+          <span><strong>Effective Date:</strong> September 2026</span>
+          <span><strong>Platform:</strong> Google Play Android Ecosystem</span>
+        </div>
+      </header>
+
+      <!-- Policy Content -->
+      <div class="doc-content-card">
+        
+        <!-- Section 1 -->
+        <section class="doc-section">
+          <h2 class="doc-section-title">
+            <span class="doc-section-num">1</span>
+            <span data-i18n="priv_sec1_title">Overview & Philosophy</span>
+          </h2>
+          <p data-i18n="priv_sec1_p1">
+            At Nosorogus, we are committed to respecting and protecting the privacy of our players and users. We develop engaging, tactile mobile games and educational experiences designed to be accessible, safe, and family-friendly.
+          </p>
+          <p data-i18n="priv_sec1_p2">
+            Our guiding principle is simple: <strong>we do not collect, harvest, sell, or trade your personal information</strong>. You can enjoy our games and applications without creating an account, registering personal profiles, or disclosing private data.
+          </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="doc-section">
+          <h2 class="doc-section-title">
+            <span class="doc-section-num">2</span>
+            <span data-i18n="priv_sec2_title">Information Collection & Device Storage</span>
+          </h2>
+          <p data-i18n="priv_sec2_p1">
+            <strong>Personal Data:</strong> None of our applications (including <em>Chef's Challenge: Meal Prep Sprint</em> and <em>Our Solar System</em>) request, track, or transmit personal data such as names, phone numbers, email addresses, physical addresses, or precise GPS locations.
+          </p>
+          <p data-i18n="priv_sec2_p2">
+            <strong>Gameplay and Local Data:</strong> All game states, high scores, kitchen upgrades, and atlas view settings are stored locally on your device via standard Android internal storage. This data never leaves your device and is not sent to external proprietary servers.
+          </p>
+          <div class="doc-callout">
+            <p data-i18n="priv_sec2_callout">
+              <strong>Local Control:</strong> Because your gameplay progress is saved locally, clearing app data or uninstalling the app from your Android settings will remove locally stored progress.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="doc-section">
+          <h2 class="doc-section-title">
+            <span class="doc-section-num">3</span>
+            <span data-i18n="priv_sec3_title">Children's Privacy (Google Play Families Compliance)</span>
+          </h2>
+          <p data-i18n="priv_sec3_p1">
+            Our educational guide <em>Our Solar System</em> and our culinary arcade <em>Chef's Challenge</em> are designed to be safe for family members and curious minds of all ages.
+          </p>
+          <p data-i18n="priv_sec3_p2">
+            We strictly comply with the Children's Online Privacy Protection Act (COPPA) and Google Play Families Policy standards. We do not knowingly collect or solicit any personal information from children under the age of 13 (or higher as required by applicable national law). If a parent or guardian believes their child has somehow provided information, please contact us immediately for prompt deletion.
+          </p>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="doc-section">
+          <h2 class="doc-section-title">
+            <span class="doc-section-num">4</span>
+            <span data-i18n="priv_sec4_title">Diagnostics, Telemetry & Third-Party Platforms</span>
+          </h2>
+          <p data-i18n="priv_sec4_p1">
+            <strong>Google Play Services:</strong> Our apps are distributed through the Google Play Store. Google may collect standard aggregated, anonymized technical telemetry (such as device model, OS version, performance benchmarks, and anonymized stack traces when a crash occurs) via Google Play Console to help us identify software bugs and improve stability. This telemetry is governed by Google's Privacy Policy.
+          </p>
+          <p data-i18n="priv_sec4_p2">
+            <strong>Embedded Media:</strong> On our website, we may embed video gameplay trailers hosted on YouTube. Viewing these trailers is optional and subject to YouTube / Google's privacy terms.
+          </p>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="doc-section">
+          <h2 class="doc-section-title">
+            <span class="doc-section-num">5</span>
+            <span data-i18n="priv_sec5_title">Android App Permissions</span>
+          </h2>
+          <p data-i18n="priv_sec5_p1">
+            Our applications request only the minimum system permissions necessary to operate:
+          </p>
+          <ul class="doc-list">
+            <li class="doc-list-item" data-i18n="priv_perm_1"><strong>Internet & Network State:</strong> Used exclusively to check connectivity for opening the official Google Play store listing or loading optional update notices.</li>
+            <li class="doc-list-item" data-i18n="priv_perm_2"><strong>Haptic Feedback / Vibration:</strong> Used in Chef's Challenge to provide tactile physical response when chopping ingredients, flipping pans, or reaching critical cooking temperatures.</li>
+          </ul>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="doc-section">
+          <h2 class="doc-section-title">
+            <span class="doc-section-num">6</span>
+            <span data-i18n="priv_sec6_title">Data Retention, User Rights & Deletion</span>
+          </h2>
+          <p data-i18n="priv_sec6_p1">
+            Because we do not maintain remote databases containing personal user records, you retain complete physical control over your data directly on your device.
+          </p>
+          <p data-i18n="priv_sec6_p2">
+            To delete all local data associated with any of our apps at any time:
+          </p>
+          <ul class="doc-list">
+            <li class="doc-list-item" data-i18n="priv_del_1">Open your device's <strong>Android Settings</strong>.</li>
+            <li class="doc-list-item" data-i18n="priv_del_2">Navigate to <strong>Apps & Notifications</strong> &rarr; select the respective Nosorogus app.</li>
+            <li class="doc-list-item" data-i18n="priv_del_3">Tap <strong>Storage & Cache</strong> &rarr; choose <strong>Clear Storage / Clear Data</strong>.</li>
+          </ul>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="doc-section">
+          <h2 class="doc-section-title">
+            <span class="doc-section-num">7</span>
+            <span data-i18n="priv_sec7_title">Changes to This Policy & Contact Information</span>
+          </h2>
+          <p data-i18n="priv_sec7_p1">
+            We may periodically update our Privacy Policy to reflect app updates, new releases, or regulatory changes. Any modifications will be posted directly to this page with an updated revision date.
+          </p>
+          <p data-i18n="priv_sec7_p2">
+            If you have questions, feedback, or inquiries regarding our privacy standards, please reach out through our official support channel:
+          </p>
+          <div class="doc-callout">
+            <p>
+              <strong data-i18n="priv_contact_label">Developer Support:</strong> 
+              <a href="../support/" style="color: var(--accent-brand); font-weight: 700; text-decoration: underline;" data-i18n="priv_contact_link">Visit Developer Support Page</a>
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-area">
+            <div class="logo-mark">N</div>
+            <span>Nosorogus</span>
+          </div>
+          <p data-i18n="footer_desc">
+            Indie game and app development studio built for the Android ecosystem.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 data-i18n="footer_nav_title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="../" data-i18n="nav_home">Home</a></li>
+            <li><a href="../#catalog" data-i18n="nav_apps">Apps & Games</a></li>
+            <li><a href="../support/" data-i18n="nav_support">Support</a></li>
+            <li><a href="https://play.google.com/store/apps/developer?id=Nosorogus" target="_blank" rel="noopener noreferrer">Google Play Developer Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 data-i18n="footer_legal_title">Legal & Inquiries</h4>
+          <ul class="footer-links-list">
+            <li><a href="../support/" data-i18n="footer_contact">Developer Support</a></li>
+            <li><a href="./" data-i18n="footer_privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Nosorogus. <span data-i18n="footer_rights">All rights reserved.</span></div>
+        <div>Designed for Android & Google Play</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/policy-i18n.js"></script>
+</body>
+</html>
