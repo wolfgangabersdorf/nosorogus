@@ -1,0 +1,16 @@
+# Private wallet configuration (never commit real wallet addresses!)
+wallets.private.json
+wallets.json
+*.private.json
+*.secret.json
+.env
+.env.*
+.env.local
+
+# Node & Temp
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
