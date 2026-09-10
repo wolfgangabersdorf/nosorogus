@@ -79,6 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
       cta_lead: "Подписывайтесь на страницу разработчика Nosorogus, чтобы первыми получать обновления кулинарных баттлов и космических открытий.",
       cta_visit_store: "Перейти на страницу разработчика",
 
+      // Lightbox & Footer Links
+      lightbox_prev: "← Предыдущий",
+      lightbox_next: "Следующий →",
+      footer_top: "В начало",
+      meta_desc: "Официальная страница разработчика Android приложений и мобильных игр Nosorogus на Google Play. Интерактивные кулинарные битвы и познавательные путеводители.",
+      
       // Footer
       footer_desc: "Независимая студия разработки приложений и мобильных игр для экосистемы Android.",
       footer_nav_title: "Навигация",
@@ -161,6 +167,12 @@ document.addEventListener("DOMContentLoaded", () => {
       cta_lead: "Stay tuned with Nosorogus on Google Play for new content updates, culinary challenges, and astronomy additions.",
       cta_visit_store: "Visit Developer Profile",
 
+      // Lightbox & Footer Links
+      lightbox_prev: "← Previous",
+      lightbox_next: "Next →",
+      footer_top: "Back to top",
+      meta_desc: "Official Google Play developer page for Nosorogus Android apps and mobile games. Interactive culinary battles and educational astronomy guides.",
+
       // Footer
       footer_desc: "Indie game and app development studio built for the Android ecosystem.",
       footer_nav_title: "Navigation",
@@ -172,8 +184,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  // Browser Language Detection Engine
+  // Default is "en". If browser language is Russian ("ru", "ru-RU", etc.), select "ru".
+  function detectBrowserLanguage() {
+    var browserLangs = [];
+    if (Array.isArray(navigator.languages)) {
+      browserLangs.push.apply(browserLangs, navigator.languages);
+    }
+    if (navigator.language) {
+      browserLangs.push(navigator.language);
+    }
+    if (navigator.userLanguage) {
+      browserLangs.push(navigator.userLanguage);
+    }
+
+    var primary = browserLangs.length > 0 ? (browserLangs[0] || "").toLowerCase() : "";
+    if (primary.indexOf("ru") === 0) {
+      return "ru";
+    }
+    return "en";
+  }
+
+  function getInitialLanguage() {
+    // Clear old legacy key from prior versions if present
+    try {
+      localStorage.removeItem("nosorogus_lang");
+    } catch (e) {}
+
+    // Check if user explicitly clicked a language button previously
+    var userChoice = null;
+    try {
+      userChoice = localStorage.getItem("nosorogus_user_lang");
+    } catch (e) {}
+
+    if (userChoice === "ru" || userChoice === "en") {
+      return userChoice;
+    }
+
+    return detectBrowserLanguage();
+  }
+
   // State
-  let currentLang = localStorage.getItem("nosorogus_lang") || "ru";
+  let currentLang = window.__initialLang || getInitialLanguage();
 
   // Elements
   const langBtns = document.querySelectorAll(".lang-btn");
@@ -226,26 +278,6 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         src: "https://play-lh.googleusercontent.com/GHreWg9Y1E0jDkt6nU7h54cvNn60-coFVgLcMCffuuWs-PHa8eKhOMT9rZYp2P3cDQ0Z3GvTa7UCJQsXiaIslg=w1200",
         caption: "Our Solar System — Orbit & Planet Atlas"
-      },
-      {
-        src: "https://play-lh.googleusercontent.com/xjpDpgtSIWZBQ9hBSIaSjrPK90cBDBxcMX5brLAV5SwB0KuVmD_4ajQAzO-v8FhmCZUpOu3j4kWvVXJS9A=w1200",
-        caption: "Our Solar System — Planetary Details & Scale"
-      },
-      {
-        src: "https://play-lh.googleusercontent.com/pkKXoPl5q7n8T0s7KREtdvUZn1PLRgx-Ox0t4tkO8af4JpgGbyAxLBTsvEKKBCjwBACQsZisSYNmHPGbBA=w1200",
-        caption: "Our Solar System — Atmospheric & Size Comparison"
-      },
-      {
-        src: "https://play-lh.googleusercontent.com/haCjMpwXoqbJeotHYbcTPkZ6oJX-ENIEbGMpgoJRd18DcZBVXaVpqtBOQQobCmzUKRX5oycL8Qw=w1200",
-        caption: "Our Solar System — Moons and Major Bodies"
-      },
-      {
-        src: "https://play-lh.googleusercontent.com/KUnvVSJGOe7oq-qW-E5kFNOMgfk4GkOp7wEyi6tVFOkrUJJzYSH-Gxr_nto-DH5VMBjLIFGRaMA=w1200",
-        caption: "Our Solar System — Comparative Analytics"
-      },
-      {
-        src: "https://play-lh.googleusercontent.com/9XYHjrCZz7VwD3Ztyn9MKPkit-ei1iW6wPtNmhkgdqvXmK-IFHyBaZHhm1yoyddCAaUuNTHyK9w=w1200",
-        caption: "Our Solar System — Planetary Science for All"
       }
     ]
   };
@@ -257,7 +289,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function setLanguage(lang) {
     if (!translations[lang]) return;
     currentLang = lang;
-    localStorage.setItem("nosorogus_lang", lang);
     document.documentElement.lang = lang;
 
     i18nElements.forEach(el => {
@@ -272,15 +303,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.title = translations[lang].site_title;
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && translations[lang].meta_desc) {
+      metaDesc.setAttribute("content", translations[lang].meta_desc);
+    }
   }
 
   langBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-      setLanguage(btn.getAttribute("data-lang"));
+      const chosen = btn.getAttribute("data-lang");
+      try {
+        localStorage.setItem("nosorogus_user_lang", chosen);
+      } catch (e) {}
+      setLanguage(chosen);
     });
   });
 
-  // Apply initial language
+  // Apply initial detected or saved language
   setLanguage(currentLang);
 
   // Scroll Header Shadow
@@ -364,8 +404,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateLightbox() {
     const item = activeGallery[currentGalleryIndex];
+    if (!item) return;
     lightboxImg.src = item.src;
-    lightboxCaption.textContent = `${item.caption} (${currentGalleryIndex + 1}/${activeGallery.length})`;
+    const hasMultiple = activeGallery.length > 1;
+    lightboxCaption.textContent = hasMultiple
+      ? `${item.caption} (${currentGalleryIndex + 1}/${activeGallery.length})`
+      : item.caption;
+
+    lightboxPrev.style.display = hasMultiple ? "flex" : "none";
+    lightboxNext.style.display = hasMultiple ? "flex" : "none";
   }
 
   function navigateLightbox(direction) {
