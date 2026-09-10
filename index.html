@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosorogus — Разработчик Android приложений и игр</title>
+  
+  <meta name="description" content="Официальная страница разработчика Android приложений и мобильных игр Nosorogus на Google Play. Интерактивные кулинарные битвы и познавательные путеводители.">
+  <meta name="keywords" content="Nosorogus, Android Developer, Google Play, Chef's Challenge, Our Solar System, Android Games, Разработчик игр">
+  <meta name="author" content="Nosorogus">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nosorogus.github.io/">
+  <meta property="og:title" content="Nosorogus — Разработчик Android приложений и игр">
+  <meta property="og:description" content="Официальная страница разработчика Android приложений и мобильных игр Nosorogus на Google Play.">
+  <meta property="og:image" content="https://play-lh.googleusercontent.com/-l5jb1qYa9L5R-wte5-qO3NkgxeoNcTKwvvzeikJghMP3q7ywrLA0n2DogERaCaWCA2mi20N1dUxJBRksZwwEw=w1200">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nosorogus.github.io/">
+  <meta property="twitter:title" content="Nosorogus — Android Apps & Games">
+  <meta property="twitter:description" content="Официальная страница разработчика Android приложений и мобильных игр Nosorogus.">
+  <meta property="twitter:image" content="https://play-lh.googleusercontent.com/-l5jb1qYa9L5R-wte5-qO3NkgxeoNcTKwvvzeikJghMP3q7ywrLA0n2DogERaCaWCA2mi20N1dUxJBRksZwwEw=w1200">
+
+  <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Nosorogus",
+    "url": "https://play.google.com/store/apps/developer?id=Nosorogus",
+    "description": "Android Apps & Games Development Studio"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#hero" class="logo-area" id="brandLogo">
+        <div class="logo-mark">N</div>
+        <span data-i18n="brand_name">Nosorogus</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#catalog" class="nav-link" id="navCatalog" data-i18n="nav_apps">Игры и приложения</a></li>
+          <li><a href="#craft" class="nav-link" id="navCraft" data-i18n="nav_craft">О разработке</a></li>
+          <li><a href="#about" class="nav-link" id="navAbout" data-i18n="nav_about">Студия</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button type="button" class="lang-btn active" data-lang="ru" id="langRuBtn">RU</button>
+          <button type="button" class="lang-btn" data-lang="en" id="langEnBtn">EN</button>
+        </div>
+
+        <a href="https://play.google.com/store/apps/developer?id=Nosorogus" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-primary" 
+           id="headerGooglePlayBtn"
+           data-i18n="btn_playstore">
+          Google Play
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text-col">
+          <div class="hero-badge-row">
+            <span class="hero-badge">
+              <span class="badge-dot"></span>
+              <span data-i18n="hero_badge">Официальный разработчик Google Play</span>
+            </span>
+          </div>
+
+          <h1 data-i18n="hero_title">Игры и полезные приложения с характером для Android</h1>
+
+          <p class="hero-lead" data-i18n="hero_lead">
+            Создаем отзывчивые мобильные игры и познавательные приложения. Интуитивное сенсорное управление, продуманная динамика и чистый визуальный стиль.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn-primary" id="heroExploreBtn" data-i18n="hero_cta_explore">Смотреть каталог</a>
+            <a href="https://play.google.com/store/apps/developer?id=Nosorogus" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-secondary" 
+               id="heroStoreBtn" 
+               data-i18n="hero_cta_store">
+              Профиль на Google Play
+            </a>
+          </div>
+
+          <div class="hero-meta-strip">
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="meta_platform">Платформа</span>
+              <span class="meta-value" data-i18n="meta_platform_val">Android OS</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="meta_titles">Релизы</span>
+              <span class="meta-value" data-i18n="meta_titles_val">2 проекта в Google Play</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="meta_category">Категории</span>
+              <span class="meta-value" data-i18n="meta_category_val">Игры & Семья</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <!-- Floating Preview Card 1: Chef's Challenge -->
+            <div class="hero-preview-card card-primary">
+              <img src="https://i.ytimg.com/vi/Pl12tZ_HwWY/hqdefault.jpg" 
+                   alt="Chef's Challenge Gameplay Banner" 
+                   class="card-thumb-banner"
+                   loading="eager">
+              <div class="card-header-line">
+                <img src="https://play-lh.googleusercontent.com/ADE_OOClr4kuHkgS3uO3U0-U6JYLBWlPTZHSfPWLV1odgk1CF8weZOG5PADcnMPanM1kfQG489zwi8BUZA1MxD4=s128" 
+                     alt="Chef's Challenge Icon" 
+                     class="card-app-icon">
+                <div class="card-app-info">
+                  <div class="card-app-title">Chef's Challenge</div>
+                  <div class="card-app-cat">Meal Prep Sprint • Cooking Battle</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Preview Card 2: Solar System -->
+            <div class="hero-preview-card card-secondary">
+              <div class="card-header-line">
+                <img src="https://play-lh.googleusercontent.com/X998tIf3BYhyuul9CHAE2wWkvqL_8NM7XepYg5Tnn-8MGi6Wd1pNHjacV6hayvNsDXxNj1W8bfvBHG_zlRvbElc=s128" 
+                     alt="Solar System Icon" 
+                     class="card-app-icon">
+                <div class="card-app-info">
+                  <div class="card-app-title">Our Solar System</div>
+                  <div class="card-app-cat">Planetary Guide • Astronomy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="section-spacing" id="catalog">
+      <div class="container">
+        <div class="catalog-header">
+          <div>
+            <h2 data-i18n="catalog_title">Опубликованные проекты</h2>
+          </div>
+
+          <div class="catalog-filters" role="group" aria-label="Project filter">
+            <button type="button" class="filter-btn active" data-filter="all" id="filterAllBtn" data-i18n="filter_all">Все проекты</button>
+            <button type="button" class="filter-btn" data-filter="game" id="filterGameBtn" data-i18n="filter_games">Игры</button>
+            <button type="button" class="filter-btn" data-filter="education" id="filterEduBtn" data-i18n="filter_family">Образование и семья</button>
+          </div>
+        </div>
+
+        <div class="products-stack">
+          
+          <!-- Product Card 1: Chef's Challenge -->
+          <article class="product-detail-card" data-category="game" id="projectChefChallenge">
+            <div class="product-content">
+              <div>
+                <div class="product-meta-header">
+                  <img src="https://play-lh.googleusercontent.com/ADE_OOClr4kuHkgS3uO3U0-U6JYLBWlPTZHSfPWLV1odgk1CF8weZOG5PADcnMPanM1kfQG489zwi8BUZA1MxD4=s128" 
+                       alt="Chef's Challenge app icon" 
+                       class="app-badge-icon">
+                  <div class="product-tags">
+                    <span class="tag tag-kitchen" data-i18n="tag_featured_game">Флагманская игра</span>
+                    <span class="tag tag-neutral" data-i18n="tag_time_mgmt">Тайм-менеджмент</span>
+                    <span class="tag tag-neutral" data-i18n="tag_gesture">Управление жестами</span>
+                  </div>
+                </div>
+
+                <h3 class="product-title" data-i18n="game_title">Chef's Challenge: Meal Prep Sprint</h3>
+                <h4 class="product-subtitle" data-i18n="game_subtitle">Сможете ли вы выдержать неумолимую жару кухонного часа пик?</h4>
+                
+                <p class="product-desc" data-i18n="game_desc">
+                  Динамичная кулинарная игра на время, где скорость, точность и стратегия определяют судьбу каждого заказа. Встаньте на линию, освойте приготовление пищи с помощью жестов, контролируйте температуру на нескольких конфорках и накормите голодных клиентов, прежде чем истечет время.
+                </p>
+
+                <ul class="feature-highlights">
+                  <li class="feature-item">
+                    <span class="feature-bullet"></span>
+                    <span data-i18n="game_feat_1">Интуитивное управление жестами: нарезайте, чистите, натирайте кубиками и взбивайте соусы</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-bullet"></span>
+                    <span data-i18n="game_feat_2">Контроль нескольких конфорок и духовок: готовьте одновременно, не допуская пригорания</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-bullet"></span>
+                    <span data-i18n="game_feat_3">Износ и модернизация посуды: обновляйте сковородки и переходите на 6-конфорочные профессиональные плиты</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-bullet"></span>
+                    <span data-i18n="game_feat_4">VIP-клиенты и неожиданные события: перебои со светом, счастливые часы и особые награды шефа</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="product-footer-actions">
+                <a href="https://play.google.com/store/apps/details?id=ru.abersdorf.kitchenbattle" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-primary"
+                   id="btnGetChefChallenge"
+                   data-i18n="btn_get_game">
+                  Установить из Google Play
+                </a>
+                <button type="button" 
+                        class="btn btn-outline-kitchen" 
+                        data-action="open-trailer" 
+                        data-video-id="Pl12tZ_HwWY"
+                        id="btnWatchChefTrailer"
+                        data-i18n="btn_watch_trailer">
+                  Смотреть трейлер
+                </button>
+              </div>
+            </div>
+
+            <div class="product-media">
+              <!-- Main Video / Screenshot Frame -->
+              <div class="main-preview-frame">
+                <img src="https://i.ytimg.com/vi/Pl12tZ_HwWY/hqdefault.jpg" 
+                     alt="Chef's Challenge Video Thumbnail" 
+                     class="main-preview-img">
+                <div class="video-play-overlay" data-action="open-trailer" data-video-id="Pl12tZ_HwWY" role="button" aria-label="Play Game Trailer">
+                  <div class="play-circle">&#9658;</div>
+                  <span class="play-text" data-i18n="play_trailer_label">Трейлер геймплея</span>
+                </div>
+              </div>
+
+              <!-- High-res Screenshots Gallery Strip -->
+              <div class="screenshot-strip">
+                <button type="button" class="screenshot-thumb-btn" data-gallery="kitchen" data-index="0" aria-label="Screenshot 1">
+                  <img src="https://play-lh.googleusercontent.com/-l5jb1qYa9L5R-wte5-qO3NkgxeoNcTKwvvzeikJghMP3q7ywrLA0n2DogERaCaWCA2mi20N1dUxJBRksZwwEw=w526-h296" 
+                       alt="Screenshot 1" 
+                       class="thumb-image" 
+                       loading="lazy">
+                </button>
+                <button type="button" class="screenshot-thumb-btn" data-gallery="kitchen" data-index="1" aria-label="Screenshot 2">
+                  <img src="https://play-lh.googleusercontent.com/ZQTFDZg0wnFUINxkgqgSKH4jJZXCcxTao9QMz7tFGIU3ws2aMy2vLg_PzZIiMylhwB9dTwGalNgeB2VT5XAANQ=w526-h296" 
+                       alt="Screenshot 2" 
+                       class="thumb-image" 
+                       loading="lazy">
+                </button>
+                <button type="button" class="screenshot-thumb-btn" data-gallery="kitchen" data-index="2" aria-label="Screenshot 3">
+                  <img src="https://play-lh.googleusercontent.com/99C0Y0EUQDWsssT5qIOcctkIO3sghNTBR19XrVzAKpV6V6aI0rWkF4np0_XZiKJ3_fDEttWw-VNeV9j_M_MoLQ=w526-h296" 
+                       alt="Screenshot 3" 
+                       class="thumb-image" 
+                       loading="lazy">
+                </button>
+                <button type="button" class="screenshot-thumb-btn" data-gallery="kitchen" data-index="3" aria-label="Screenshot 4">
+                  <img src="https://play-lh.googleusercontent.com/E0F2nkF7a2VTii6-B6T2zRHaaAf5ANntlmnWhLiNQQXeX_j99NKdPLY9hjVHQkB91U_RUpvyuQK065oyenkluQ=w526-h296" 
+                       alt="Screenshot 4" 
+                       class="thumb-image" 
+                       loading="lazy">
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 2: Our Solar System -->
+          <article class="product-detail-card" data-category="education" id="projectSolarSystem">
+            <div class="product-content">
+              <div>
+                <div class="product-meta-header">
+                  <img src="https://play-lh.googleusercontent.com/X998tIf3BYhyuul9CHAE2wWkvqL_8NM7XepYg5Tnn-8MGi6Wd1pNHjacV6hayvNsDXxNj1W8bfvBHG_zlRvbElc=s128" 
+                       alt="Our Solar System app icon" 
+                       class="app-badge-icon">
+                  <div class="product-tags">
+                    <span class="tag tag-cosmos" data-i18n="tag_edu_app">Познавательное приложение</span>
+                    <span class="tag tag-neutral" data-i18n="tag_astronomy">Астрономия</span>
+                    <span class="tag tag-neutral" data-i18n="tag_interactive">Интерактивный атлас</span>
+                  </div>
+                </div>
+
+                <h3 class="product-title" data-i18n="solar_title">Our Solar System (Солнечная система)</h3>
+                <h4 class="product-subtitle" data-i18n="solar_subtitle">Простой и наглядный путеводитель по планетам нашего космического окружения</h4>
+                
+                <p class="product-desc" data-i18n="solar_desc">
+                  Наглядное космическое приложение, помогающее исследовать планеты и спутники нашей Солнечной системы. Получайте ключевые научные факты с первого взгляда, сравнивайте масштабы миров и узнавайте законы космоса в легкой для восприятия форме.
+                </p>
+
+                <ul class="feature-highlights">
+                  <li class="feature-item">
+                    <span class="feature-bullet"></span>
+                    <span data-i18n="solar_feat_1">Полный атлас планет: от раскаленного Меркурия до ледяного Нептуна</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-bullet"></span>
+                    <span data-i18n="solar_feat_2">Ключевые астрономические параметры: диаметр, масса, расстояние от Солнца, периоды обращения и атмосфера</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-bullet"></span>
+                    <span data-i18n="solar_feat_3">Сравнительный анализ планет для понимания реальных масштабов космических объектов</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-bullet"></span>
+                    <span data-i18n="solar_feat_4">Чистый интерфейс без перегрузки, оптимизированный для комфортного изучения всей семьей</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="product-footer-actions">
+                <a href="https://play.google.com/store/apps/details?id=ru.nosorogus.solarsystem" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-primary"
+                   id="btnGetSolarSystem"
+                   data-i18n="btn_get_solar">
+                  Открыть в Google Play
+                </a>
+                <button type="button" 
+                        class="btn btn-outline-cosmos" 
+                        data-gallery="solar" 
+                        data-index="0"
+                        id="btnViewSolarScreens"
+                        data-i18n="btn_view_screens">
+                  Смотреть скриншоты
+                </button>
+              </div>
+            </div>
+
+            <div class="product-media">
+              <div class="main-preview-frame" data-gallery="solar" data-index="0" role="button" aria-label="Open Fullscreen Screenshot" style="cursor: pointer;">
+                <img src="https://play-lh.googleusercontent.com/GHreWg9Y1E0jDkt6nU7h54cvNn60-coFVgLcMCffuuWs-PHa8eKhOMT9rZYp2P3cDQ0Z3GvTa7UCJQsXiaIslg=w1052-h592" 
+                     alt="Our Solar System Planetary Atlas Overview" 
+                     class="main-preview-img">
+              </div>
+
+              <div class="screenshot-strip">
+                <button type="button" class="screenshot-thumb-btn" data-gallery="solar" data-index="1" aria-label="Solar Screenshot 1">
+                  <img src="https://play-lh.googleusercontent.com/xjpDpgtSIWZBQ9hBSIaSjrPK90cBDBxcMX5brLAV5SwB0KuVmD_4ajQAzO-v8FhmCZUpOu3j4kWvVXJS9A=w526-h296" 
+                       alt="Planet Details Screenshot" 
+                       class="thumb-image" 
+                       loading="lazy">
+                </button>
+                <button type="button" class="screenshot-thumb-btn" data-gallery="solar" data-index="2" aria-label="Solar Screenshot 2">
+                  <img src="https://play-lh.googleusercontent.com/pkKXoPl5q7n8T0s7KREtdvUZn1PLRgx-Ox0t4tkO8af4JpgGbyAxLBTsvEKKBCjwBACQsZisSYNmHPGbBA=w526-h296" 
+                       alt="Atmospheric Comparison Screenshot" 
+                       class="thumb-image" 
+                       loading="lazy">
+                </button>
+                <button type="button" class="screenshot-thumb-btn" data-gallery="solar" data-index="3" aria-label="Solar Screenshot 3">
+                  <img src="https://play-lh.googleusercontent.com/haCjMpwXoqbJeotHYbcTPkZ6oJX-ENIEbGMpgoJRd18DcZBVXaVpqtBOQQobCmzUKRX5oycL8Qw=w526-h296" 
+                       alt="Moons and Celestial Objects Screenshot" 
+                       class="thumb-image" 
+                       loading="lazy">
+                </button>
+                <button type="button" class="screenshot-thumb-btn" data-gallery="solar" data-index="4" aria-label="Solar Screenshot 4">
+                  <img src="https://play-lh.googleusercontent.com/KUnvVSJGOe7oq-qW-E5kFNOMgfk4GkOp7wEyi6tVFOkrUJJzYSH-Gxr_nto-DH5VMBjLIFGRaMA=w526-h296" 
+                       alt="Comparative Analytics Screenshot" 
+                       class="thumb-image" 
+                       loading="lazy">
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Google Play Store CTA Banner Box -->
+        <div class="cta-box" id="about">
+          <h2 data-i18n="cta_title">Следите за новыми релизами в Google Play</h2>
+          <p data-i18n="cta_lead">
+            Подписывайтесь на страницу разработчика Nosorogus, чтобы первыми получать обновления кулинарных баттлов и космических открытий.
+          </p>
+          <div class="cta-buttons-row">
+            <a href="https://play.google.com/store/apps/developer?id=Nosorogus" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-primary"
+               id="ctaDeveloperPageBtn"
+               data-i18n="cta_visit_store">
+              Перейти на страницу разработчика
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Engineering & Design Craft Pillars -->
+    <section class="section-spacing craft-section" id="craft">
+      <div class="container">
+        <h2 data-i18n="craft_title">Принципы нашей разработки</h2>
+        
+        <div class="craft-grid">
+          <div class="craft-pillar">
+            <div class="pillar-number">01</div>
+            <h3 class="pillar-title" data-i18n="craft_1_title">Тактильный отклик и жесты</h3>
+            <p class="pillar-text" data-i18n="craft_1_desc">
+              В играх мы уделяем особое внимание физике касаний: нарезка, перетаскивание и управление плитой ощущаются естественно и отзывчиво.
+            </p>
+          </div>
+
+          <div class="craft-pillar">
+            <div class="pillar-number">02</div>
+            <h3 class="pillar-title" data-i18n="craft_2_title">Оптимизация под экраны Android</h3>
+            <p class="pillar-text" data-i18n="craft_2_desc">
+              Плавная работа на смартфонах и планшетах различных диагоналей, поддержка современных соотношений сторон и стабильный фреймрейт.
+            </p>
+          </div>
+
+          <div class="craft-pillar">
+            <div class="pillar-number">03</div>
+            <h3 class="pillar-title" data-i18n="craft_3_title">Безопасность и семейный доступ</h3>
+            <p class="pillar-text" data-i18n="craft_3_desc">
+              Наши приложения создаются в соответствии с высокими стандартами Google Play Families: понятный интерфейс и уважение к приватности.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-area">
+            <div class="logo-mark">N</div>
+            <span>Nosorogus</span>
+          </div>
+          <p data-i18n="footer_desc">
+            Независимая студия разработки приложений и мобильных игр для экосистемы Android.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 data-i18n="footer_nav_title">Навигация</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero">В начало</a></li>
+            <li><a href="#catalog" data-i18n="nav_apps">Игры и приложения</a></li>
+            <li><a href="#craft" data-i18n="nav_craft">О разработке</a></li>
+            <li><a href="https://play.google.com/store/apps/developer?id=Nosorogus" target="_blank" rel="noopener noreferrer">Google Play Developer Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 data-i18n="footer_legal_title">Политика и контакты</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://play.google.com/store/apps/developer?id=Nosorogus" target="_blank" rel="noopener noreferrer" data-i18n="footer_contact">Поддержка разработчика</a></li>
+            <li><a href="#hero" data-i18n="footer_privacy">Политика конфиденциальности</a></li>
+            <li><a href="#hero" data-i18n="footer_terms">Условия использования</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Nosorogus. <span data-i18n="footer_rights">Все права защищены.</span></div>
+        <div>Designed for Android & Google Play</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal 1: YouTube Video Trailer -->
+  <div class="modal-backdrop" id="videoModal" role="dialog" aria-modal="true" aria-label="Game Trailer Player">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="video-container">
+        <iframe id="videoIframe" src="" title="Gameplay Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Screenshot Lightbox -->
+  <div class="modal-backdrop" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Screenshots Gallery">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" aria-label="Close gallery">&times;</button>
+      <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="Full size screenshot" class="lightbox-image">
+        <div id="lightboxCaption" class="lightbox-caption">Screenshot</div>
+        <div class="lightbox-nav">
+          <button type="button" class="lightbox-nav-btn" id="lightboxPrev">&larr; Предыдущий</button>
+          <button type="button" class="lightbox-nav-btn" id="lightboxNext">Следующий &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
