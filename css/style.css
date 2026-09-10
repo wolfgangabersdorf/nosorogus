@@ -1364,8 +1364,118 @@ button {
   margin-bottom: 0;
 }
 
+/* Monero Crypto Donation Box */
+.crypto-donation-box {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  margin-top: 1.25rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.crypto-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.crypto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  background-color: #fff7ed;
+  color: #c2410c;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: 1px solid #ffedd5;
+}
+
+.crypto-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ea580c;
+  box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.2);
+}
+
+.crypto-network-tag {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.crypto-address-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.crypto-address-field {
+  flex: 1 1 300px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  word-break: break-all;
+  line-height: 1.5;
+  user-select: all;
+  background-color: #f8fafc;
+}
+
+.btn-copy-address {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  min-height: 48px;
+  background-color: var(--accent-brand);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-copy-address:hover {
+  background-color: var(--accent-brand-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-copy-address.copied {
+  background-color: var(--accent-emerald);
+}
+
+.crypto-card-footer {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 @media (max-width: 768px) {
   .doc-content-card {
     padding: 1.75rem 1.25rem;
+  }
+  .crypto-donation-box {
+    padding: 1.25rem;
+  }
+  .btn-copy-address {
+    width: 100%;
   }
 }

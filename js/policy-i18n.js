@@ -82,7 +82,13 @@
 
       supp_sec3_title: "Предложения и отзывы",
       supp_sec3_p1: "Мы открыты для предложений игроков и любителей космоса! Новые рецепты, механики готовки, космические объекты — присылайте ваши идеи на наш email.",
-      supp_sec3_callout: "Мы читаем каждое письмо и учитываем пожелания игроков при планировании обновлений."
+      supp_sec3_callout: "Мы читаем каждое письмо и учитываем пожелания игроков при планировании обновлений.",
+
+      supp_sec4_title: "Поддержка разработчиков",
+      supp_sec4_p1: "Вы можете поддержать разработчиков и дальнейшее развитие независимых мобильных игр и образовательных проектов через криптовалюту Monero (XMR). Все средства идут на разработку новых механик, контента и поддержание приложений без агрессивной рекламы.",
+      supp_crypto_network: "Официальный кошелек XMR",
+      btn_copy_address: "Копировать адрес",
+      supp_crypto_footer: "Прямая поддержка разработчиков без платформенных комиссий и посредников. Спасибо за ваш вклад в развитие независимых проектов!"
     },
     en: {
       crumb_home: "Home",
@@ -162,7 +168,13 @@
 
       supp_sec3_title: "Feature Requests & Suggestions",
       supp_sec3_p1: "We love hearing from passionate cooks and space enthusiasts! Whether you want new recipes, custom kitchen stations, deeper planetary atmosphere layers, or new astronomical objects, send your ideas to our mailbox.",
-      supp_sec3_callout: "We review every piece of feedback and prioritize upcoming features and balance tweaks based on player suggestions."
+      supp_sec3_callout: "We review every piece of feedback and prioritize upcoming features and balance tweaks based on player suggestions.",
+
+      supp_sec4_title: "Support the Developers",
+      supp_sec4_p1: "You can support the developers and the future development of our indie games and apps via Monero (XMR). All contributions directly fund new game content, physics optimizations, and ad-free educational tools.",
+      supp_crypto_network: "Official XMR Donation Wallet",
+      btn_copy_address: "Copy Address",
+      supp_crypto_footer: "Direct peer-to-peer developer support without platform intermediaries. Thank you for keeping indie apps alive!"
     }
   };
 
@@ -194,9 +206,58 @@
     });
   });
 
+  // Setup copy address button
+  function initCopyButton() {
+    const copyBtn = document.getElementById("btnCopyXmr");
+    const addrField = document.getElementById("xmrAddressText");
+    if (!copyBtn || !addrField) return;
+
+    copyBtn.addEventListener("click", async () => {
+      const textToCopy = addrField.textContent.trim();
+      let copied = false;
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(textToCopy);
+          copied = true;
+        }
+      } catch (e) {
+        // Fallback below
+      }
+
+      if (!copied) {
+        try {
+          const textarea = document.createElement("textarea");
+          textarea.value = textToCopy;
+          textarea.style.position = "fixed";
+          textarea.style.opacity = "0";
+          document.body.appendChild(textarea);
+          textarea.focus();
+          textarea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textarea);
+          copied = true;
+        } catch (err) {
+          console.error("Copy failed:", err);
+        }
+      }
+
+      if (copied) {
+        const currentLang = document.documentElement.lang || "en";
+        copyBtn.textContent = currentLang === "ru" ? "Скопировано! ✓" : "Copied! ✓";
+        copyBtn.classList.add("copied");
+        setTimeout(() => {
+          const dict = docTranslations[document.documentElement.lang] || docTranslations.en;
+          copyBtn.textContent = dict.btn_copy_address || "Copy Address";
+          copyBtn.classList.remove("copied");
+        }, 2200);
+      }
+    });
+  }
+
   // Apply on load based on document lang or initial detection
   document.addEventListener("DOMContentLoaded", () => {
     const activeLang = document.documentElement.lang || (window.__initialLang || "en");
     applyDocTranslations(activeLang);
+    initCopyButton();
   });
 })();
